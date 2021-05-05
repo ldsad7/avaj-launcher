@@ -13,7 +13,7 @@ public class Logger implements AutoCloseable {
 
     private Logger() {
         try {
-            writer = new BufferedWriter(new FileWriter(fileName, true));
+            writer = new BufferedWriter(new FileWriter(fileName, false));
         } catch (IOException e) {
             throw new LoggerException("We weren't able to open the file `" + fileName + "` (" + e + ")");
         }

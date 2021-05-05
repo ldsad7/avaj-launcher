@@ -9,6 +9,7 @@ import java.util.List;
 public class Tower {
     private final static Logger LOGGER = Logger.getInstance();
     private final List<Flyable> observers = new ArrayList<>();
+    private final List<Flyable> observersToRemove = new ArrayList<>();
 
     public void register(Flyable flyable) {
         if (observers.contains(flyable)) {
@@ -22,13 +23,15 @@ public class Tower {
         if (!observers.contains(flyable)) {
             throw new TowerException("The list of observers doesn't contain Flyable " + flyable);
         }
-        this.observers.remove(flyable);
+        observersToRemove.add(flyable);
         LOGGER.log(this + " says: " + flyable + " unregistered from weather tower.");
     }
 
     public void conditionsChanged() {
-        for (Flyable flyable : this.observers) {
-            flyable.updateConditions();
+        observers.removeAll(observersToRemove);
+        observersToRemove.clear();
+        for (Flyable observer : observers) {
+            observer.updateConditions();
         }
     }
 

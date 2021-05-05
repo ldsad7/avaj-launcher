@@ -1,6 +1,6 @@
 package simulator.models;
 
-import simulator.exceptions.CoordinatesException;
+//import simulator.exceptions.CoordinatesException;
 
 public class Coordinates {
     private final int longitude;
@@ -8,12 +8,12 @@ public class Coordinates {
     private final int height;
 
     public Coordinates(int longitude, int latitude, int height) {
-        if (longitude <= 0 || latitude <= 0) {
-            throw new CoordinatesException(
-                    "We received negative values for coordinates: (" + longitude + ", " + latitude + ")");
-        }
-        this.longitude = longitude;
-        this.latitude = latitude;
+//        if (longitude <= 0 || latitude <= 0) {
+//            throw new CoordinatesException(
+//                    "We received negative values for coordinates: (" + longitude + ", " + latitude + ")");
+//        }
+        this.longitude = max(1, longitude);
+        this.latitude = max(1, latitude);
         this.height = min(100, max(0, height));
     }
 

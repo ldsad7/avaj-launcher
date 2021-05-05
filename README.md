@@ -1,13 +1,9 @@
 The file `en.subject.pdf` describes the task
 
-Steps:
+Steps (from the root directory):
 - `find * -name "*.java" > sources.txt`
 - `javac @sources.txt`
+- `java Simulator src/scenario.txt`
 
-Commands (from root directory):
-- ``
-
-Usages:
-- `usage: npuzzle_gen.py [-h] (-s | -u) [-i ITERATIONS] size`
-
-Scenario `scenario.txt` should be at the root directory
+Usage:
+- `java Simulator pathToFile`
