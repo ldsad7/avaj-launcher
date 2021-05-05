@@ -1,7 +1,8 @@
 package simulator.abstract_classes;
 
-import simulator.exceptions.AirCraftException;
+import simulator.exceptions.AircraftException;
 import simulator.models.Coordinates;
+import simulator.models.Logger;
 
 import java.util.Objects;
 
@@ -10,14 +11,15 @@ public abstract class AirCraft {
     private final String name;
     private final long id;
     protected Coordinates coordinates;
+    protected final static Logger LOGGER = Logger.getInstance();
 
     public AirCraft(String name, Coordinates coordinates) {
         if (name == null) {
-            throw new AirCraftException("Received `name` variable is null");
+            throw new AircraftException("Received `name` variable is null");
         }
         this.name = name;
         if (coordinates == null) {
-            throw new AirCraftException("Received `coordinates` variable is null");
+            throw new AircraftException("Received `coordinates` variable is null");
         }
         this.coordinates = coordinates;
         this.id = this.nextId();
@@ -42,10 +44,6 @@ public abstract class AirCraft {
 
     @Override
     public String toString() {
-        return this.getClass().getSimpleName() + "{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", coordinates=" + coordinates +
-                '}';
+        return this.getClass().getSimpleName() + "#" + name + "(" + id + ")";
     }
 }

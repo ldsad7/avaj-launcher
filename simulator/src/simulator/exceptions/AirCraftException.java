@@ -1,7 +1,7 @@
 package simulator.exceptions;
 
-public class AirCraftException extends RuntimeException {
-    public AirCraftException(String message) {
+public class AircraftException extends RuntimeException {
+    public AircraftException(String message) {
         super(message);
     }
 }
