@@ -1,7 +1,7 @@
-package simulator.models;
+package com.tsimonis.avaj_launcher.models;
 
-import simulator.exceptions.TowerException;
-import simulator.interfaces.Flyable;
+import com.tsimonis.avaj_launcher.exceptions.TowerException;
+import com.tsimonis.avaj_launcher.interfaces.Flyable;
 
 import java.util.ArrayList;
 import java.util.List;

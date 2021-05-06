@@ -1,7 +1,7 @@
-package simulator.models;
+package com.tsimonis.avaj_launcher.models;
 
-import simulator.enums.WeatherEnum;
-import simulator.exceptions.WeatherProviderException;
+import com.tsimonis.avaj_launcher.enums.WeatherEnum;
+import com.tsimonis.avaj_launcher.exceptions.WeatherProviderException;
 
 public class WeatherProvider {
     private final static WeatherEnum[] weather = WeatherEnum.values();

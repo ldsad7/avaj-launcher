@@ -1,13 +1,13 @@
-package simulator.models;
+package com.tsimonis.avaj_launcher.models;
 
-import simulator.abstract_classes.AirCraft;
-import simulator.exceptions.AircraftException;
-import simulator.interfaces.Flyable;
+import com.tsimonis.avaj_launcher.abstract_classes.AirCraft;
+import com.tsimonis.avaj_launcher.exceptions.AircraftException;
+import com.tsimonis.avaj_launcher.interfaces.Flyable;
 
-public class JetPlane extends AirCraft implements Flyable {
+public class Helicopter extends AirCraft implements Flyable {
     private WeatherTower weatherTower;
 
-    public JetPlane(String name, Coordinates coordinates) {
+    public Helicopter(String name, Coordinates coordinates) {
         super(name, coordinates);
     }
 
@@ -22,22 +22,22 @@ public class JetPlane extends AirCraft implements Flyable {
         String message = "";
         switch (weatherTower.getWeather(this.coordinates)) {
             case SUN:
-                message = "This is hot.";
-                latitude += 10;
+                message = "Let's enjoy the good weather and take some pics.";
+                longitude += 10;
                 height += 2;
                 break;
             case RAIN:
-                message = "Damn you rain! You messed up my JetPlane.";
-                latitude -= 5;
+                message = "It's raining. Better watch out for lightings.";
+                longitude -= 5;
                 break;
             case FOG:
-                message = "Foggy-moggy, everything is wrong with this weather!";
-                latitude += 1;
+                message = "Where are you? I don't see you!";
+                longitude += 1;
                 break;
             default:
             case SNOW:
-                message = "OMG! Winter is coming!";
-                height -= 7;
+                message = "My rotor is going to freeze!";
+                height -= 12;
                 break;
         }
         LOGGER.log(this + ": " + message);

@@ -1,6 +1,6 @@
-package simulator.models;
+package com.tsimonis.avaj_launcher.models;
 
-import simulator.exceptions.LoggerException;
+import com.tsimonis.avaj_launcher.exceptions.LoggerException;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

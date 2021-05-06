@@ -1,4 +1,4 @@
-package simulator.models;
+package com.tsimonis.avaj_launcher.models;
 
 //import simulator.exceptions.CoordinatesException;
 

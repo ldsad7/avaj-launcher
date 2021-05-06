@@ -1,6 +1,6 @@
-package simulator.models;
+package com.tsimonis.avaj_launcher.models;
 
-import simulator.enums.WeatherEnum;
+import com.tsimonis.avaj_launcher.enums.WeatherEnum;
 
 public class WeatherTower extends Tower {
     public WeatherEnum getWeather(Coordinates coordinates) {

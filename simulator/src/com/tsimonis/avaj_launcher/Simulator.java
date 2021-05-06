@@ -1,10 +1,10 @@
-package simulator;
+package com.tsimonis.avaj_launcher;
 
-import simulator.exceptions.SimulatorException;
-import simulator.interfaces.Flyable;
-import simulator.models.AircraftFactory;
-import simulator.models.Logger;
-import simulator.models.WeatherTower;
+import com.tsimonis.avaj_launcher.exceptions.SimulatorException;
+import com.tsimonis.avaj_launcher.interfaces.Flyable;
+import com.tsimonis.avaj_launcher.models.Logger;
+import com.tsimonis.avaj_launcher.models.WeatherTower;
+import com.tsimonis.avaj_launcher.models.AircraftFactory;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

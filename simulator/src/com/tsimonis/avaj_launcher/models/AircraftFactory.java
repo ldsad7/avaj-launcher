@@ -1,8 +1,8 @@
-package simulator.models;
+package com.tsimonis.avaj_launcher.models;
 
-import simulator.enums.AircraftEnum;
-import simulator.exceptions.AircraftException;
-import simulator.interfaces.Flyable;
+import com.tsimonis.avaj_launcher.enums.AircraftEnum;
+import com.tsimonis.avaj_launcher.exceptions.AircraftException;
+import com.tsimonis.avaj_launcher.interfaces.Flyable;
 
 import java.lang.reflect.InvocationTargetException;
 

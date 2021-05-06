@@ -1,9 +1,8 @@
 The file `en.subject.pdf` describes the task
 
-Steps (from the root directory):
-- `find * -name "*.java" > sources.txt`
-- `javac @sources.txt`
-- `java Simulator src/scenario.txt`
+Steps (run shell scripts from the root directory):
+- `sh clean.sh`
+- `sh run.sh`
 
-Usage:
-- `java Simulator pathToFile`
+Usage (from the directory `simulator/src`):
+- `java com.tsimonis.avaj_launcher.Simulator pathToFile`

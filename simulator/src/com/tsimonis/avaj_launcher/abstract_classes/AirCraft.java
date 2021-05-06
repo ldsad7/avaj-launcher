@@ -1,8 +1,8 @@
-package simulator.abstract_classes;
+package com.tsimonis.avaj_launcher.abstract_classes;
 
-import simulator.exceptions.AircraftException;
-import simulator.models.Coordinates;
-import simulator.models.Logger;
+import com.tsimonis.avaj_launcher.exceptions.AircraftException;
+import com.tsimonis.avaj_launcher.models.Coordinates;
+import com.tsimonis.avaj_launcher.models.Logger;
 
 import java.util.Objects;
 

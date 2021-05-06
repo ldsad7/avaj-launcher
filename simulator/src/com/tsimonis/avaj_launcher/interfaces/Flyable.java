@@ -1,6 +1,6 @@
-package simulator.interfaces;
+package com.tsimonis.avaj_launcher.interfaces;
 
-import simulator.models.WeatherTower;
+import com.tsimonis.avaj_launcher.models.WeatherTower;
 
 public interface Flyable {
     void updateConditions();
